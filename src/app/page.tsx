@@ -9,7 +9,7 @@ export default function Home() {
 
           <div className="avatar absolute sm:relative -top-16 sm:-top-0">
             <div className="w-36 rounded-full sm:rounded ">
-              <img src="https://scontent.fbkk22-7.fna.fbcdn.net/v/t39.30808-6/459584025_26667188076229613_5804961633655525451_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGm9HA0gsQyE_K7eaxPfzPbqr_Ifz_Q_yCqv8h_P9D_IDUuZ2DK42gk4Y6T6upIvRPA96HZuWYUUJiAazWJpoVt&_nc_ohc=KKu0QIJjZrIQ7kNvgF0xFOd&_nc_oc=AdhHkz_f4uCrsjicsw8sCdSXDAuhR4dgikH1T8_Lja2J78y6Q1bL9g_uXa0yJKFPTTU&_nc_zt=23&_nc_ht=scontent.fbkk22-7.fna&_nc_gid=AFA-nSkxJ6i9pBtjq0RihSi&oh=00_AYD0KhHpECj4lmafbfjhj0BF6WyDdLcsn3SZ6RrEwre3Pw&oe=67B11995" />
+              <Image src="https://scontent.fbkk22-7.fna.fbcdn.net/v/t39.30808-6/459584025_26667188076229613_5804961633655525451_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGm9HA0gsQyE_K7eaxPfzPbqr_Ifz_Q_yCqv8h_P9D_IDUuZ2DK42gk4Y6T6upIvRPA96HZuWYUUJiAazWJpoVt&_nc_ohc=KKu0QIJjZrIQ7kNvgF0xFOd&_nc_oc=AdhHkz_f4uCrsjicsw8sCdSXDAuhR4dgikH1T8_Lja2J78y6Q1bL9g_uXa0yJKFPTTU&_nc_zt=23&_nc_ht=scontent.fbkk22-7.fna&_nc_gid=AFA-nSkxJ6i9pBtjq0RihSi&oh=00_AYD0KhHpECj4lmafbfjhj0BF6WyDdLcsn3SZ6RrEwre3Pw&oe=67B11995" alt={"Profile"} />
             </div>
           </div>
 
