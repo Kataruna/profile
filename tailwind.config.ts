@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui"
+import { Outfit } from "next/font/google";
 
 export default {
   content: [
@@ -13,6 +15,11 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      'Outfit': ['Outfit', "sans-serif"],
+    }
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 } satisfies Config;
