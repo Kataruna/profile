@@ -13,6 +13,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'light': '#efe5ce',
+        'light-popout': '#fdfdf6',
+        'light-content': '#1d2126',
+        'dark': '#15191e',
+        'dark-popout':'#2a323b',
+        'dark-content': '#ededed',
       },
     },
     fontFamily: {
