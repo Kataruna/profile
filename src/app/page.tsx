@@ -41,6 +41,10 @@ export default function Home() {
               <a href="https://line.me/ti/p/TlNlXZIRfc" target="_blank" rel="noopener noreferrer">
                 <Icon icon="simple-icons:line" className="text-[1.5rem]" />
               </a>
+
+              <a href="https://www.instagram.com/kataruchibun?igsh=Nnh4YXMwY2JtNm1k" target="_blank" rel="noopener noreferrer">
+                <Icon icon="mingcute:instagram-fill" className="text-[1.5rem]" />
+              </a>
             </div>
           </div>
 
