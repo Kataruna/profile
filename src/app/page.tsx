@@ -25,9 +25,13 @@ export default function Home() {
           <div className="flex-col items-center sm:items-start sm:pl-52 sm:py-2">
             <div className="flex-col card-title font-Outfit leading-[1rem] px-6 pt-20 text-center sm:pt-0 sm:text-left sm:items-start">
               <div className="font-extrabold text-[1.4rem] sm:text">Thanayos Siratranont</div>
-              <div className="font-normal text-base">UX/UI Designer | Programmer</div>
+              <div className="font-normal text-base flex flex-row gap-1">
+                <div >Programmer</div>
+                <div className="translate-y-[0.12rem] -translate-x-[0.02rem]">•</div>
+                <div >UX/UI Designer</div>
+              </div>
             </div>
-
+            
             <div className="divider"></div>
 
             <div className="flex flex-row justify-center gap-5">
@@ -52,7 +56,7 @@ export default function Home() {
               </a>
 
               <a href="https://www.instagram.com/kataruchibun?igsh=Nnh4YXMwY2JtNm1k" target="_blank" rel="noopener noreferrer">
-                <Icon icon="mingcute:instagram-fill" className="text-[1.5rem]" />
+                <Icon icon="teenyicons:instagram-solid" className="text-[1.5rem]" />
               </a>
             </div>
           </div>
