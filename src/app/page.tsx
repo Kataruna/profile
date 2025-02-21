@@ -1,5 +1,7 @@
-// import Image from "next/image";
+import Image from "next/image";
 import { Icon } from '@iconify/react';
+
+const profile = `https://drive.google.com/uc?export=view&id=1ypr0dyhoU0D-VR-TZ4lsK5EWMjfjiw3H`;
 
 export default function Home() {
   return (
@@ -8,8 +10,15 @@ export default function Home() {
         <div className="card-body landscape:sm:flex-row p-[1rem] gap-[1rem] items-center">
 
           <div className="avatar absolute -top-16 sm:left-6">
-            <div className="w-36 rounded-full sm:w-48 border-2 dark:border-0 border-light-content">
-              <img src="https://cdn.discordapp.com/attachments/880737440619442206/1340711826777837699/FB_IMG_1739546412994.jpg?ex=67b35ab0&is=67b20930&hm=89157b28275bede468c32b796a3b0af44238b9ca6a00de0330404567b26ec871&" alt={"Profile"} />
+            <div className="w-36 h-36 sm:w-48 sm:h-48 rounded-full border-2 dark:border-0 border-light-content">
+              <Image
+                src={profile}
+                alt="Profile"
+                layout="responsive"
+                width={512}
+                height={512}
+                className="rounded-full"
+              />
             </div>
           </div>
 

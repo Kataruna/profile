@@ -1,8 +1,9 @@
-// import type { NextConfig } from "next";
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    domains: ['drive.google.com'],
+  },
   basePath: '/profile',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
