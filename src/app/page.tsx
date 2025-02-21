@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Icon } from '@iconify/react';
 
-const profile = `https://drive.google.com/uc?export=view&id=1ypr0dyhoU0D-VR-TZ4lsK5EWMjfjiw3H`;
+const profile = `https://www.dropbox.com/scl/fi/sa5519sbw95ngtx34jkz7/459584025_26667188076229613_5804961633655525451_n.jpg?rlkey=e8ytpvwqmdp8rj6332pj99t2o&st=2q97l1g6&raw=1`;
 
 export default function Home() {
   return (
