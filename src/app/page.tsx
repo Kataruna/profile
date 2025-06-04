@@ -35,7 +35,7 @@ export default function Home() {
             <div className="divider"></div>
 
             <div className="flex flex-row justify-center gap-5">
-              <a href="mailto:tuaa1bb2@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:thanayos.sira@gmail.com" target="_blank" rel="noopener noreferrer">
                 <Icon icon="ic:round-mail" className="text-[1.5rem]" />
               </a>
 
