@@ -11,7 +11,7 @@ export default function Home() {
     { href: "https://x.com/Katarubun", icon: "meteor-icons:x-alt" },
     { href: "https://line.me/ti/p/TlNlXZIRfc", icon: "simple-icons:line" },
     { href: "https://www.instagram.com/kataruchibun?igsh=Nnh4YXMwY2JtNm1k", icon: "teenyicons:instagram-solid" },
-    { href: "https://discordapp.com/users/178869268148912128", icon: "ic:round-discord" },
+    { href: "https://discord.com/users/178869268148912128", icon: "ic:round-discord" },
     { href: "https://www.facebook.com/tutor.siratranont/", icon:"mdi:facebook"},
   ];
 
