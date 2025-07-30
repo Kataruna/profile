@@ -73,7 +73,7 @@ export default function Home() {
             <div className="divider"></div>
 
             <div className="flex flex-row justify-center">
-              <div className="carousel gap-4 max-w-[12.5rem] py-[0.1rem]" style={{scrollbarWidth: 'thin'}}>
+              <div className="carousel gap-4 max-w-[14rem] py-[0.1rem]">
                 {socialLinks.map((link, index) => (
                   <button
                     key={index}
