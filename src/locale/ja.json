@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "name": "タナヨット・シラタラノン",
+    "nickname": "チューター",
+    "title": "{name}のプロフィール",
+    "description": "{name}のプロフィール",
+    "roles": {
+      "programmer": "プログラマー",
+      "designer": "UX/UIデザイナー"
+    },
+    "actions": {
+      "copyDiscord": "クリックしてコピー: {username}",
+      "openLink": "{platform}を開く",
+      "copied": "コピーしました: {text}"
+    },
+    "social": {
+      "email": "メール",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "line": "LINE",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "discord": "Discord"
+    }
+  }
+}

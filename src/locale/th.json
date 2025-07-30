@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "name": "ธนยศ ศิรธรานนท์",
+    "nickname": "ติวเตอร์",
+    "title": "โปรไฟล์ของ {name}",
+    "description": "โปรไฟล์ของ {name}",
+    "roles": {
+      "programmer": "โปรแกรมเมอร์",
+      "designer": "นักออกแบบ UX/UI"
+    },
+    "actions": {
+      "copyDiscord": "คลิกเพื่อคัดลอก: {username}",
+      "openLink": "เปิด {platform}",
+      "copied": "คัดลอกแล้ว: {text}"
+    },
+    "social": {
+      "email": "อีเมล",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "line": "LINE",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "discord": "Discord"
+    }
+  }
+}

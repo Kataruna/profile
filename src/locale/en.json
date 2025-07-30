@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "name": "Thanayos Siratranont",
+    "nickname": "Tutor",
+    "title": "{name}'s Profile",
+    "description": "{name}'s profile",
+    "roles": {
+      "programmer": "Programmer",
+      "designer": "UX/UI Designer"
+    },
+    "actions": {
+      "copyDiscord": "Click to copy: {username}",
+      "openLink": "Open {platform}",
+      "copied": "Copied: {text}"
+    },
+    "social": {
+      "email": "Email",
+      "linkedin": "LinkedIn", 
+      "github": "GitHub",
+      "line": "LINE",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "discord": "Discord"
+    }
+  }
+}
