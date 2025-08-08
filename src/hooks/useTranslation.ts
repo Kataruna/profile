@@ -80,11 +80,11 @@ export function useTranslation() {
     // Get translation function (like Unity's Localization.GetString())
     const t = (key: string, params?: Record<string, string>) => {
         const keys = key.split('.');
-        let value: any = messages[locale];
+        let value: unknown = messages[locale];
 
         // Navigate through the JSON structure (like getting nested data in Unity)
         for (const k of keys) {
-            value = value?.[k];
+            value = (value as Record<string, unknown>)?.[k];
         }
 
         if (typeof value !== 'string') {
