@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "name": "타나욧 시라타라논",
+    "nickname": "튜터",
+    "title": "프로필의 {name}",
+    "description": "프로필의 {name}",
+    "roles": {
+      "programmer": "프로그래머",
+      "designer": "UX/UI 디자이너"
+    },
+    "actions": {
+      "copyDiscord": "클릭하여 복사: {username}",
+      "openLink": "{platform} 열기",
+      "copied": "복사됨: {text}"
+    },
+    "social": {
+      "email": "이메일",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "line": "LINE",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "discord": "Discord"
+    }
+  }
+}

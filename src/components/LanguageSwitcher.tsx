@@ -2,7 +2,7 @@
 
 import { Icon } from '@iconify/react';
 
-type Locale = 'en' | 'th' | 'ja';
+type Locale = 'en' | 'th' | 'ja' | 'kr';
 
 interface LanguageSwitcherProps {
     currentLocale: Locale;
@@ -14,6 +14,7 @@ export default function LanguageSwitcher({ currentLocale, onLocaleChange }: Lang
         { code: 'en' as const, name: 'English', flag: '🇺🇸' },
         { code: 'th' as const, name: 'ไทย', flag: '🇹🇭' },
         { code: 'ja' as const, name: '日本語', flag: '🇯🇵' },
+        { code: 'kr' as const, name: '한국어', flag: '🇰🇷' },
     ];
 
     return (

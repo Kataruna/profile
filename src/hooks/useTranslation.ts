@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 import en from '../locale/en.json';
 import th from '../locale/th.json';
 import ja from '../locale/ja.json';
+import kr from '../locale/kr.json';
 
-type Locale = 'en' | 'th' | 'ja';
+type Locale = 'en' | 'th' | 'ja' | 'kr';
 
-const messages = { en, th, ja };
+const messages = { en, th, ja, kr };
 
 // Font configurations for each language (like Unity's font assets for different languages)
 const fontConfigs = {
     en: 'font-outfit', // English uses Outfit
     th: 'font-ibm', // Thai uses Sarabun (better for Thai characters)
-    ja: 'font-mplus' // Japanese uses Noto Sans JP (better for Japanese characters)
+    ja: 'font-mplus', // Japanese uses Noto Sans JP (better for Japanese characters)
+    kr: 'font-jua',
 };
 
 // Enhanced device language detection (like Unity's Application.systemLanguage)
@@ -57,7 +59,7 @@ export function useTranslation() {
         // Check if we're in the browser (not SSR)
         if (typeof window !== 'undefined') {
             const savedLocale = localStorage.getItem('locale') as Locale;
-            if (savedLocale && ['en', 'th', 'ja'].includes(savedLocale)) {
+            if (savedLocale && ['en', 'th', 'ja', 'kr'].includes(savedLocale)) {
                 setLocale(savedLocale);
             } else {
                 // Auto-detect device language (enhanced detection)
