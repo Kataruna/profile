@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+'use client';
+
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import en from '../locale/en.json';
 import th from '../locale/th.json';
 import ja from '../locale/ja.json';
@@ -8,22 +10,20 @@ type Locale = 'en' | 'th' | 'ja' | 'kr';
 
 const messages = { en, th, ja, kr };
 
-// Font configurations for each language (like Unity's font assets for different languages)
+// Font configurations for each language
 const fontConfigs = {
-    en: 'font-outfit', // English uses Outfit
-    th: 'font-ibm', // Thai uses Sarabun (better for Thai characters)
-    ja: 'font-mplus', // Japanese uses Noto Sans JP (better for Japanese characters)
+    en: 'font-outfit',
+    th: 'font-ibm',
+    ja: 'font-mplus',
     kr: 'font-jua',
 };
 
-// Enhanced device language detection (like Unity's Application.systemLanguage)
+// Enhanced device language detection
 const detectDeviceLanguage = (): Locale => {
-    // Check if we're in browser environment
     if (typeof window === 'undefined' || typeof navigator === 'undefined') {
         return 'en';
     }
 
-    // Get browser languages in order of preference
     const browserLanguages = navigator.languages || [navigator.language];
 
     for (const lang of browserLanguages) {
@@ -32,7 +32,6 @@ const detectDeviceLanguage = (): Locale => {
         const languageCode = lang.split('-')[0].toLowerCase();
         const fullLang = lang.toLowerCase();
 
-        // Map different language codes to our supported locales
         if (languageCode === 'th' || fullLang.includes('thai')) {
             return 'th';
         }
@@ -41,37 +40,43 @@ const detectDeviceLanguage = (): Locale => {
             return 'ja';
         }
 
-        // For English and other languages default to English
+        if (languageCode === 'ko' || languageCode === 'kr' || fullLang.includes('korean')) {
+            return 'kr';
+        }
+
         if (languageCode === 'en') {
             return 'en';
         }
     }
 
-    return 'en'; // Ultimate fallback
+    return 'en';
 };
 
-// This is like Unity's Localization.GetStringAsync() but simpler
-export function useTranslation() {
+interface TranslationContextType {
+    locale: Locale;
+    changeLocale: (newLocale: Locale) => void;
+    t: (key: string, params?: Record<string, string>) => string;
+    getFontClass: () => string;
+}
+
+const TranslationContext = createContext<TranslationContextType | undefined>(undefined);
+
+export function TranslationProvider({ children }: { children: ReactNode }) {
     const [locale, setLocale] = useState<Locale>('en');
 
-    // Load saved language from localStorage or detect from device
     useEffect(() => {
-        // Check if we're in the browser (not SSR)
         if (typeof window !== 'undefined') {
             const savedLocale = localStorage.getItem('locale') as Locale;
             if (savedLocale && ['en', 'th', 'ja', 'kr'].includes(savedLocale)) {
                 setLocale(savedLocale);
             } else {
-                // Auto-detect device language (enhanced detection)
                 const detectedLocale = detectDeviceLanguage();
                 setLocale(detectedLocale);
-                // Save the detected language
                 localStorage.setItem('locale', detectedLocale);
             }
         }
     }, []);
 
-    // Save language choice (like Unity's PlayerPrefs.SetString())
     const changeLocale = (newLocale: Locale) => {
         setLocale(newLocale);
         if (typeof window !== 'undefined') {
@@ -79,21 +84,18 @@ export function useTranslation() {
         }
     };
 
-    // Get translation function (like Unity's Localization.GetString())
     const t = (key: string, params?: Record<string, string>) => {
         const keys = key.split('.');
         let value: unknown = messages[locale];
 
-        // Navigate through the JSON structure (like getting nested data in Unity)
         for (const k of keys) {
             value = (value as Record<string, unknown>)?.[k];
         }
 
         if (typeof value !== 'string') {
-            return key; // Fallback to key if translation not found
+            return key;
         }
 
-        // Replace parameters {name} with actual values (like Unity's string formatting)
         if (params) {
             return value.replace(/\{(\w+)\}/g, (match: string, paramKey: string) => {
                 return params[paramKey] || match;
@@ -103,8 +105,19 @@ export function useTranslation() {
         return value;
     };
 
-    // Get font class for current language (like Unity's font switching)
     const getFontClass = () => fontConfigs[locale];
 
-    return { locale, changeLocale, t, getFontClass };
+    return (
+        <TranslationContext.Provider value={{ locale, changeLocale, t, getFontClass }}>
+            {children}
+        </TranslationContext.Provider>
+    );
+}
+
+export function useTranslation() {
+    const context = useContext(TranslationContext);
+    if (!context) {
+        throw new Error('useTranslation must be used within a TranslationProvider');
+    }
+    return context;
 }
