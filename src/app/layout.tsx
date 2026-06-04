@@ -4,11 +4,7 @@ import { IBM_Plex_Sans_Thai } from "next/font/google";
 import { M_PLUS_Rounded_1c } from "next/font/google";
 import { Jua } from "next/font/google";
 import "./globals.css";
-import {
-  TranslationProvider,
-  useTranslation,
-} from "@/contexts/TranslationContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { TranslationProvider } from "@/contexts/TranslationContext";
 // import StaggeredMenu from "@/components/StaggeredMenu";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -25,9 +21,6 @@ const mplus = M_PLUS_Rounded_1c({
 const jua = Jua({ subsets: ["latin"], weight: "400", variable: "--font-jua" });
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
-  const { locale, changeLocale } = useTranslation();
-
-
   return (
     <>
       {/* Language Switcher */}
